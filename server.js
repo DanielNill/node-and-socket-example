@@ -24,9 +24,9 @@ server = http.createServer(function(req, res){
         break;
         default: send404(res);
     }
-}),
+});
 
-send404 = function(res){
+var send404 = function(res){
     res.writeHead(404);
     res.write('404');
     res.end();
